@@ -1,0 +1,14 @@
+<img src="/s/feed-icon-14x14.png"> [RSS 订阅](RSSFeed)
+
+<form name="_xclick" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+<input type="hidden" name="cmd" value="_xclick">
+<input type="hidden" name="business" value="agentzh@gmail.com">
+<input type="hidden" name="item_name" value="OpenResty Donation (in USD)">
+<input type="hidden" name="currency_code" value="USD">
+<input type="hidden" name="amount" value="">
+<input type="image" src="/s/donate_button_paypal_01.gif" border="0" name="submit" alt="Donate with PayPal">
+</form>
+
+
+<a href="http://me.alipay.com/agentzh" target="_blank"><img src="/s/donate-with-alipay.png"></a>
+

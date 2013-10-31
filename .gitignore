@@ -2,3 +2,6 @@
 *.swp
 *.swo
 upload
+build/*.html
+cn/build/*.html
+cn/build/cn

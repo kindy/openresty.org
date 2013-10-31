@@ -1,0 +1,8 @@
+body {
+    font-size: 14px;
+}
+
+#sidebar .list-group a {
+    display: block;
+    margin-bottom: 3px;
+}

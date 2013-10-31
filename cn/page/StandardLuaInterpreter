@@ -1,0 +1,3 @@
+The standard Lua interpreter is enabled by default. If [LuaJIT](LuaJIT) is enabled, this interpreter will be disabled automatically.
+
+See Lua's homepage: http://www.lua.org/

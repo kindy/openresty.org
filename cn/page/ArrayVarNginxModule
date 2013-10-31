@@ -1,0 +1,3 @@
+This [Nginx](Nginx) module adds support for array variables to nginx config files.
+
+Project page: https://github.com/agentzh/array-var-nginx-module

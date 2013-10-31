@@ -1,0 +1,40 @@
+# English Articles
+* Nginx image processing server with OpenResty and Lua, by leafo.
+<dl class="level-1"><dd> http://leafo.net/posts/creating_an_image_server.html</dd></dl>
+* ~WebSockets with OpenResty, by Aapo Talvensaari.
+<dl class="level-1"><dd> https://medium.com/p/1778601c9e05</dd></dl>
+* Scaling with Queues, by Rohit Yadav.
+<dl class="level-1"><dd> http://engineering.wingify.com/scaling-with-queues/</dd></dl>
+* Scaling ~TextRazor in the Cloud with Nginx and Lua, by Toby.
+<dl class="level-1"><dd> http://www.textrazor.com/blog/2013/03/scaling-textrazor-in-the-cloud-with-nginx-and-lua.html</dd></dl>
+* Augmenting ~APIs with Nginx and Lua, by Raimon Grau
+<dl class="level-1"><dd> http://3scale.github.com/2013/01/09/augment-your-api-without-touching-it/</dd></dl>
+* Pushing Nginx to its limit with Lua, by Matthieu Tourne
+<dl class="level-1"><dd> http://blog.cloudflare.com/pushing-nginx-to-its-limit-with-lua</dd></dl>
+* Yak Shaving: Adding ~OAuth Support to Nginx via Lua, by Jose ~Diaz-Gonzalez
+<dl class="level-1"><dd> http://seatgeek.com/blog/dev/oauth-support-for-nginx-with-lua</dd></dl>
+* My beautiful dark twisted reverse-proxy LRU cache, by Mike Ferrier
+<dl class="level-1"><dd> http://mikeferrier.com/2011/05/14/my-beautiful-dark-twisted-reverse-proxy-LRU-cache/</dd></dl>
+* Day 41 - Setting up ngx_openresty (WAS: testing Test::Nginx) , by Antoine Bonavita
+<dl class="level-1"><dd> http://www.nginx-discovery.com/2011/03/day-41-setting-up-ngxopenresty-was.html</dd></dl>
+# Chinese Articles
+* An introduction to OpenResty, by Wang Dong
+<dl class="level-1"><dd> http://wdicc.com/intro-openresty/</dd></dl>
+* Nginx 3rd-Party Module Experiments Journal, by smallfish
+<dl class="level-1"><dd> http://chenxiaoyu.org/2011/10/30/nginx-modules.html</dd></dl>
+* Recommending OpenResty - An Nginx Version with Fully Capable Addons, by Wendal Chen
+<dl class="level-1"><dd> http://wendal.net/338.html</dd></dl>
+* Constructing Efficient and Transparent Caching Mechanism with MemcNginxModule and SrcacheNginxModule, by Zhang Yang
+<dl class="level-1"><dd> http://www.codinglabs.org/html/nginx-memc-and-srcache.html</dd></dl>
+* The Nginx Session Module, by smallfish
+<dl class="level-1"><dd> http://chenxiaoyu.org/2011/11/09/nginx-session.html</dd></dl>
+* ~Nginx-Lua HTTP 401 Basic Authentication, by smallfish
+<dl class="level-1"><dd> http://chenxiaoyu.org/2012/02/08/nginx-lua-401-auth.html</dd></dl>
+* Using ngx_openresty to create an ~AJAX-style pager for data listing, by lhmwzy
+<dl class="level-1"><dd> http://blog.163.com/lhmwzy@126/blog/static/64215736201212384413704/</dd></dl>
+* Nginx Variable Tutorials, by agentzh
+<dl class="level-1"><dd> http://blog.sina.com.cn/openresty</dd></dl>
+* Nginx & Lua, by laowang
+<dl class="level-1"><dd> http://huoding.com/2012/08/31/156</dd></dl>
+* Implementing a simple server-push solution, by laowang
+<dl class="level-1"><dd> http://huoding.com/2012/09/28/174</dd></dl>

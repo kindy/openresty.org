@@ -3,6 +3,84 @@ var fs = require('fs');
 var page = require('webpage').create();
 var url = 'cn/index.html';
 
+page.open(url, function (status) {
+
+    var pages = page.evaluate(collectPages);
+
+    function slug(name) {
+        return name;
+    }
+
+    /* path: {name, created, modified, modifier, tags} */
+    var data = {};
+
+    var i = pages.length;
+    while (--i >= 0) {
+        console.log('writing: ', pages[i].name);
+        if (slug(pages[i].name) == 'stylesheetlayout') continue;
+        fs.write('cn/page/' + slug(pages[i].name), buildWiki(pages[i]), data, 'w');
+    }
+
+    console.log('all done.');
+
+    phantom.exit();
+});
+
+function collectPages() {
+    var pages = [];
+
+    store.forEachTiddler(function(title, t) {
+        var page = {
+            name: t.title,
+            content: t.text,
+            creator: t.creator,
+            created: +t.created,
+            modified: +t.modified,
+            modifier: t.modifier,
+            tags: (t.tags || []).slice()
+        };
+        pages.push(page);
+    });
+
+    return pages;
+}
+
+function buildWiki(wiki, data) {
+    return tw2md(wiki.content.replace(/<<toolbar permalink>>\n\n?/, ''));
+
+    var body = [];
+    var TEXT = function(t) { return t; },
+        LIST = function(t) { return t && t.join(',') || ''; };
+    var keys = {
+        name: TEXT,
+        creator: TEXT,
+        created: TEXT,
+        modifier: TEXT,
+        modified: TEXT,
+        tags: LIST
+    };
+
+    var meta = {};
+    var path,
+        val;
+    for (var key in keys) {
+        path = key.replace(/^./, function(m) { return m.toUpperCase(); });
+        val = keys[key](wiki[key]);
+        if (!val) continue;
+
+        body.push(path + ': ' + val);
+
+        meta[key] = keys[key](wiki[key]);
+    }
+    data[path] = meta;
+
+    body.push('');
+    body.push(tw2md(wiki.content.replace(/<<toolbar permalink>>\n\n?/, '')));
+
+    return body.join('\n');
+}
+
+
 function _proc(m0, m1, m2, m3) {
     if (m1 != m3) {
         if (m1 == '{{{' && m3 == '}}}') {
@@ -81,79 +159,4 @@ function tw2md(txt) {
         return m0;
     });
 }
-
-page.open(url, function (status) {
-
-    var pages = page.evaluate(function() {
-        var pages = [];
-
-        store.forEachTiddler(function(title, t) {
-            var page = {
-                name: t.title,
-                content: t.text,
-                creator: t.creator,
-                created: +t.created,
-                modified: +t.modified,
-                modifier: t.modifier,
-                tags: (t.tags || []).slice()
-            };
-            pages.push(page);
-        });
-
-        return pages;
-    });
-
-    function slug(name) {
-        return name;
-    }
-
-    /* path: {name, created, modified, modifier, tags} */
-    var data = {};
-
-    function build(wiki) {
-        return tw2md(wiki.content.replace(/<<toolbar permalink>>\n\n?/, ''));
-
-        var body = [];
-        var TEXT = function(t) { return t; },
-            LIST = function(t) { return t && t.join(',') || ''; };
-        var keys = {
-            name: TEXT,
-            creator: TEXT,
-            created: TEXT,
-            modifier: TEXT,
-            modified: TEXT,
-            tags: LIST
-        };
-
-        var meta = {};
-        var path,
-            val;
-        for (var key in keys) {
-            path = key.replace(/^./, function(m) { return m.toUpperCase(); });
-            val = keys[key](wiki[key]);
-            if (!val) continue;
-
-            body.push(path + ': ' + val);
-
-            meta[key] = keys[key](wiki[key]);
-        }
-        data[path] = meta;
-
-        body.push('');
-        body.push(tw2md(wiki.content.replace(/<<toolbar permalink>>\n\n?/, '')));
-
-        return body.join('\n');
-    }
-
-    var i = pages.length;
-    while (--i >= 0) {
-        console.log('writing: ', pages[i].name);
-        if (slug(pages[i].name) == 'stylesheetlayout') continue;
-        fs.write('cn/page/' + slug(pages[i].name), build(pages[i]), 'w');
-    }
-
-    console.log('all done.');
-
-    phantom.exit();
-});
 

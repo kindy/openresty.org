@@ -17,7 +17,7 @@ You're recommended to install the following packages using apt-get:
 ```
 apt-get install libreadline-dev libncurses5-dev libpcre3-dev libssl-dev perl make
 ```
-##Fedora and ~RedHat users
+##Fedora and RedHat users
 You're recommended to install the following packages using yum:
 ```
 yum install readline-devel pcre-devel openssl-devel
@@ -40,7 +40,7 @@ assuming that your PCRE is installed under the prefix `/usr/local/`.
 
 See also [Issue #3](https://github.com/agentzh/ngx_openresty/issues/3).
 
-##~FreeBSD users
+##FreeBSD users
 You need to install the following ports:
 * devel/gmake
 * security/openssl
@@ -48,12 +48,12 @@ You need to install the following ports:
 ##Solaris 11 users
 You need to install the following packages from the official repository:
 * gcc-3
-* ~SUNWlibm
+* SUNWlibm
 Usually it's just as simple as
 ```
 pfexec pkg install gcc-3 SUNWlibm
 ```
-#Build ~OpenResty
+#Build OpenResty
 ##Download
 download the latest ngx_openresty tarball can be fetched from the [Download](Download) page and unpack it like this:
 ```
@@ -80,7 +80,7 @@ All of the Nginx configure file options can be used here, including `--add-modul
 
 Errors in running the ./configure script can be found in the file `build/nginx-VERSION/objs/autoconf.err` where `VERSION` should be replaced by a concrete version number of OpenResty, like `0.8.54.6`.
 ###Notes for Solaris users
-For Solaris, it's common to install libraries like ~OpenSSL to `/lib`, so when it complaints about missing ~OpenSSL and you have indeed already installed it, specify the `--with-ld-opt='-L/lib'` option.
+For Solaris, it's common to install libraries like OpenSSL to `/lib`, so when it complaints about missing OpenSSL and you have indeed already installed it, specify the `--with-ld-opt='-L/lib'` option.
 ##make
 Now you can compile everything up using the command
 ```

@@ -10,7 +10,7 @@ Note: Please use the arrow keys or pageup/pagedown keys on your keyboard to swit
 
 ## The Way of Optimizing and Troubleshooting Our Lua Waf
 
-This talk was given at ~CloudFlare's Beer Meeting on 19 April 2013.
+This talk was given at CloudFlare's Beer Meeting on 19 April 2013.
 
 View slides in your web browser: http://agentzh.org/misc/slides/beer-meeting-2013-04-19/
 
@@ -38,7 +38,7 @@ Download the slides as PDF: http://agentzh.org/misc/slides/yapc-na-2013-flame-gr
 
 ## Introduction to off-CPU Time Flame Graphs
 
-This talk was given at the ~CloudFlare Beer Meeting on 23 August 2013.
+This talk was given at the CloudFlare Beer Meeting on 23 August 2013.
 
 View slides in your web browser: http://agentzh.org/misc/slides/off-cpu-flame-graphs/
 

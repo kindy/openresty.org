@@ -1,6 +1,6 @@
 First of all, please go to the [Download](Download) page to get the source code tarball of OpenResty, and see the [Installation](Installation) page for how to build and install it into your system.
 
-#~HelloWorld
+#HelloWorld
 ##Prepare directory layout
 We first create a separate directory for our experiments. You can use an arbitrary directory. Here for simplicity, we just use `~/work`:
 ```
@@ -41,8 +41,8 @@ Then we start the nginx server with our config file this way:
 nginx -p `pwd`/ -c conf/nginx.conf
 ```
 Error messages will go to the stderr device or the default error log files `logs/error.log` in the current working directory.
-##Access our ~HelloWorld web service
-We can use curl to access our new web service that says ~HelloWorld:
+##Access our HelloWorld web service
+We can use curl to access our new web service that says HelloWorld:
 ```
 curl http://localhost:8080/
 ```

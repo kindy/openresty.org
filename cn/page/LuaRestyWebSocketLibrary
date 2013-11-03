@@ -1,4 +1,4 @@
-This Lua library implements both a nonblocking ~WebSocket server and a nonblocking ~WebSocket client based on LuaNginxModule's cosocket API.
+This Lua library implements both a nonblocking WebSocket server and a nonblocking WebSocket client based on LuaNginxModule's cosocket API.
 
 Project homepage: https://github.com/agentzh/lua-resty-websocket
 

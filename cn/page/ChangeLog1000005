@@ -1,8 +1,10 @@
 # Stable Release 1.0.5.1 - 4 September 2011
+
 This release is almost the same as 1.0.5.1rc14, but upgraded LuaNginxModule to v0.3.0.
 
 The following components are bundled by this release:
-* ~LuaJIT-2.0.0-beta8
+
+* LuaJIT-2.0.0-beta8
 * array-var-nginx-module-0.03rc1
 * auth-request-nginx-module-0.2
 * drizzle-nginx-module-0.1.1rc4
@@ -27,70 +29,85 @@ The following components are bundled by this release:
 * srcache-nginx-module-0.12
 * upstream-keepalive-nginx-module-0.3
 * xss-nginx-module-0.03rc3
+
 # Mainline Version 1.0.5.1rc14 - 2 September 2011
 * upgraded LuaNginxModule to v0.2.1rc22.
-** fixed an issue with `header_filter_by_lua` directive: it was not supported in scopes other than the location scope.
+  * fixed an issue with `header_filter_by_lua` directive: it was not supported in scopes other than the location scope.
+
 # Mainline Version 1.0.5.1rc13 - 1 September 2011
 * upgraded LuaNginxModule to 0.2.1rc21.
-** added the `header_filter_by_lua` and `header_filter_by_lua_file` directives: http://wiki.nginx.org/HttpLuaModule#header_filter_by_lua
-** fixed issues with HTTP 1.0 HEAD requests.
+  * added the `header_filter_by_lua` and `header_filter_by_lua_file` directives: http://wiki.nginx.org/HttpLuaModule#header_filter_by_lua
+  * fixed issues with HTTP 1.0 HEAD requests.
 * upgraded EchoNginxModule to 0.37rc2
-** fixed issues when errors happen in a downstream output filter.
-** fixed issues with HTTP HEAD requests.
+  * fixed issues when errors happen in a downstream output filter.
+  * fixed issues with HTTP HEAD requests.
+
 # Mainline Version 1.0.5.1rc12 - 31 August 2011
 * now we bundle LuaRdsParserLibrary and enable it by default.
 * added the `--without-lua_rds_parser` option to disable the LuaRdsParserLibrary bundled.
 * now we bundle RdsCsvNginxModule and enable it by default.
 * added the `--without-http_rds_csv_module` option to disable RdsCsvNginxModule.
+
 # Mainline Version 1.0.5.1rc11 - 30 August 2011
 * upgraded RdsJsonNginxModule to v0.12rc2
-** fixed a bug in compact JSON mode: the column name in the resultset might not be escaped for JSON encoding.
+  * fixed a bug in compact JSON mode: the column name in the resultset might not be escaped for JSON encoding.
+
 # Mainline Version 1.0.5.1rc10 - 29 August 2011
 * upgraded LuaRedisParserLibrary to 0.09rc5.
-** added wiki documentation page for this Lua library: http://wiki.nginx.org/LuaRedisParser
-** added the `typename` method for converting the numeric type values returned by `parse_reply` and `parse_replies` to textual type names: http://wiki.nginx.org/LuaRedisParser#typename
+  * added wiki documentation page for this Lua library: http://wiki.nginx.org/LuaRedisParser
+  * added the `typename` method for converting the numeric type values returned by `parse_reply` and `parse_replies` to textual type names: http://wiki.nginx.org/LuaRedisParser#typename
+
 # Mainline Version 1.0.5.1rc9 - 27 August 2011
 * upgraded LuaNginxModule to v0.2.1rc19.
-** implemented the `o` regex option (i.e., the compile-once flag as Perl's `/o` modifier) for all the `ngx.re.*` API.
-** added new directive `lua_regex_cache_max_entries` to control the upper limit of the worker-process-level compiled-regex cache enabled by the `o` regex option: http://wiki.nginx.org/HttpLuaModule#lua_regex_cache_max_entries
-** now we add `ngx` and `ndk` table into `package.loaded` such that the user can write `local ngx = require 'ngx'` and `local ndk = require 'ndk'`. thanks @Lance.
+  * implemented the `o` regex option (i.e., the compile-once flag as Perl's `/o` modifier) for all the `ngx.re.*` API.
+  * added new directive `lua_regex_cache_max_entries` to control the upper limit of the worker-process-level compiled-regex cache enabled by the `o` regex option: http://wiki.nginx.org/HttpLuaModule#lua_regex_cache_max_entries
+  * now we add `ngx` and `ndk` table into `package.loaded` such that the user can write `local ngx = require 'ngx'` and `local ndk = require 'ndk'`. thanks @Lance.
+
 # Mainline Version 1.0.5.1rc8 - 26 August 2011
 * upgraded LuaNginxModule to v0.2.1rc18.
-** fixed a bug in the `ngx.re.*` regex API that look-behind assertions in PCRE regexes did not work properly.
+  * fixed a bug in the `ngx.re.*` regex API that look-behind assertions in PCRE regexes did not work properly.
+
 # Mainline Version 1.0.5.1rc7 - 26 August 2011
 * upgraded LuaNginxModule to v0.2.1rc17.
-** now we enable `ngx.re.*` regex API in `set_by_lua*` too.
+  * now we enable `ngx.re.*` regex API in `set_by_lua*` too.
+
 # Mainline Version 1.0.5.1rc6 - 25 August 2011
 * upgraded LuaNginxModule to v0.2.1rc16.
-** fixed github issue #52: compile error with nginx 1.0.5 on Ubuntu natty.
-** fixed issues found by gcc 4.6 `-Wunused-but-set-variable` warnings.
+  * fixed github issue #52: compile error with nginx 1.0.5 on Ubuntu natty.
+  * fixed issues found by gcc 4.6 `-Wunused-but-set-variable` warnings.
+
 # Mainline Version 1.0.5.1rc5 - 24 August 2011
 * upgraded LuaNginxModule to v0.2.1rc15.
-** implemented the `ngx.re.gsub()` regex API for Lua: http://wiki.nginx.org/NginxHttpLuaModule#ngx.re.gsub
+  * implemented the `ngx.re.gsub()` regex API for Lua: http://wiki.nginx.org/NginxHttpLuaModule#ngx.re.gsub
+
 # Mainline Version 1.0.5.1rc4 - 24 August 2011
 * upgraded LuaNginxModule to v0.2.1rc14.
-** added support for the optional `ctx` argument to `ngx.re.match`.
+  * added support for the optional `ctx` argument to `ngx.re.match`.
+
 # Mainline Version 1.0.5.1rc3 - 24 August 2011
 * upgraded LuaNginxModule to v0.2.1rc13.
-** implemented the `ngx.re.sub()` regex API for Lua: http://wiki.nginx.org/NginxHttpLuaModule#ngx.re.sub
-** added support for anchored match modifier `a` to `ngx.re.match`, `ngx.re.gmatch`, and `ngx.re.sub`.
+  * implemented the `ngx.re.sub()` regex API for Lua: http://wiki.nginx.org/NginxHttpLuaModule#ngx.re.sub
+  * added support for anchored match modifier `a` to `ngx.re.match`, `ngx.re.gmatch`, and `ngx.re.sub`.
 * upgraded DrizzleNginxModule to v0.1.1rc4
-** added new wiki documentation page: http://wiki.nginx.org/NginxHttpDrizzleModule
-** documented the `$drizzle_thread_id` variable.
-** added lots of debug outputs (enabled by the `--with-debug` option while building Nginx or OpenResty), inspired by github issue #10.
+  * added new wiki documentation page: http://wiki.nginx.org/NginxHttpDrizzleModule
+  * documented the `$drizzle_thread_id` variable.
+  * added lots of debug outputs (enabled by the `--with-debug` option while building Nginx or OpenResty), inspired by github issue #10.
+
 # Mainline Version 1.0.5.1rc2 - 18 August 2011
 * upgraded LuaNginxModule to v0.2.1rc12.
-** implemented the `ngx.re.gmatch()` regex API for Lua: http://wiki.nginx.org/NginxHttpLuaModule#ngx.re.gmatch
+  * implemented the `ngx.re.gmatch()` regex API for Lua: http://wiki.nginx.org/NginxHttpLuaModule#ngx.re.gmatch
+
 # Mainline Version 1.0.5.1rc1 - 17 August 2011
 * upgraded LuaNginxModule to v0.2.1rc11.
-** now `ngx.ctx = {...} ` assignment is supported.
-** made setting `ngx.header.HEADER` after sending out response headers throw out a Lua exception to help debugging issues like github issue #49. thanks Bill Donahue (ikhoyo).
-** implemented the `ngx.re.match()` regex API for Lua: http://wiki.nginx.org/NginxHttpLuaModule#ngx.re.match
+  * now `ngx.ctx = {...} ` assignment is supported.
+  * made setting `ngx.header.HEADER` after sending out response headers throw out a Lua exception to help debugging issues like github issue #49. thanks Bill Donahue (ikhoyo).
+  * implemented the `ngx.re.match()` regex API for Lua: http://wiki.nginx.org/NginxHttpLuaModule#ngx.re.match
+
 # Stable Release 1.0.5.0 - 16 August 2011
 This release is the same as 1.0.5.0rc7.
 
 The following components are bundled by this release:
-* ~LuaJIT-2.0.0-beta8
+* LuaJIT-2.0.0-beta8
 * array-var-nginx-module-0.03rc1
 * auth-request-nginx-module-0.2
 * drizzle-nginx-module-0.1.1rc3
@@ -113,28 +130,35 @@ The following components are bundled by this release:
 * srcache-nginx-module-0.12
 * upstream-keepalive-nginx-module-0.3
 * xss-nginx-module-0.03rc3
+
 # Mainline Version 1.0.5.0rc7 - 13 August 2011
 * upgraded LuaNginxModule to v0.2.1rc9.
-** implemented the special `ngx.ctx` Lua table for user programmers to store per-request Lua context data for their applications. thanks 欧远宁 for suggesting this feature.
+  * implemented the special `ngx.ctx` Lua table for user programmers to store per-request Lua context data for their applications. thanks 欧远宁 for suggesting this feature.
+
 # Mainline Version 1.0.5.0rc6 - 12 August 2011
 * upgraded LuaNginxModule to v0.2.1rc8.
-** now `ngx.print` and `ngx.say` allow (nested) array-like table arguments. the array elements in them will be sent piece by piece. this will avoid string concatenation for templating engines like [ltp](http://www.savarese.com/software/ltp/).
+  * now `ngx.print` and `ngx.say` allow (nested) array-like table arguments. the array elements in them will be sent piece by piece. this will avoid string concatenation for templating engines like [ltp](http://www.savarese.com/software/ltp/).
+
 # Mainline Version 1.0.5.0rc5 - 12 August 2011
 * upgraded LuaNginxModule to v0.2.1rc7.
-** implemented the `ngx.req.get_post_args()` method for fetching urlencoded POST query arguments from within Lua.
-** renamed `ngx.req.get_query_args` to `ngx.req.get_uri_args`. the former is now deprecated.
-** fixed a bug in `ngx.req.get_uri_args`: it could not be used more than once in a single request.
+  * implemented the `ngx.req.get_post_args()` method for fetching urlencoded POST query arguments from within Lua.
+  * renamed `ngx.req.get_query_args` to `ngx.req.get_uri_args`. the former is now deprecated.
+  * fixed a bug in `ngx.req.get_uri_args`: it could not be used more than once in a single request.
+
 # Mainline Version 1.0.5.0rc4 - 12 August 2011
 * upgraded LuaNginxModule to v0.2.1rc5.
-** implemented the `ngx.req.get_query_args()` method to fetch parsed URL query arguments from within Lua. thanks Bertrand Mansion (golgote).
-** now we allow Lua boolean and `nil` values in arguments to `ngx.say()`, `ngx.print()`, `ngx.log()` and `print()`.
+  * implemented the `ngx.req.get_query_args()` method to fetch parsed URL query arguments from within Lua. thanks Bertrand Mansion (golgote).
+  * now we allow Lua boolean and `nil` values in arguments to `ngx.say()`, `ngx.print()`, `ngx.log()` and `print()`.
+
 # Mainline Version 1.0.5.0rc3 - 11 August 2011
-* now we bundle the LuaRedisParserLibrary with us and it is enabled by default. tested on Linux i386, Linux x86_64, Mac OS X, ~FreeBSD 8.2 i386, and Solaris 11.
+* now we bundle the LuaRedisParserLibrary with us and it is enabled by default. tested on Linux i386, Linux x86_64, Mac OS X, FreeBSD 8.2 i386, and Solaris 11.
 * added the new option `--without-lua_redis_parser` to the `./configure` script.
+
 # Mainline Version 1.0.5.0rc2 - 10 August 2011
-* now we bundle the LuaCjsonLibrary with us and it is enabled by default. tested on Linux i386, Linux x86_64, Mac OS X, ~FreeBSD 8.2 i386, and Solaris 11.
+* now we bundle the LuaCjsonLibrary with us and it is enabled by default. tested on Linux i386, Linux x86_64, Mac OS X, FreeBSD 8.2 i386, and Solaris 11.
 * added the new option `--without-lua_cjson` to the `./configure` script.
 * added `<prefix>/lualib` to the default `path` and `cpath` settings of the ngx_lua's Lua VM.
+
 # Mainline Version 1.0.5.0rc1 - 9 August 2011
 * based on ngx_openresty 1.0.4.2, but with nginx core upgraded to nginx 1.0.5.
 

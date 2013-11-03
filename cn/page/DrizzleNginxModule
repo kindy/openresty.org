@@ -1,4 +1,4 @@
-This is an nginx upstream module that talks to ~MySQL and/or Drizzle database servers by [libdrizzle](libdrizzle).
+This is an nginx upstream module that talks to MySQL and/or Drizzle database servers by [libdrizzle](libdrizzle).
 
 This ngx_drizzle module is not enabled by default. You should specify the `--with-http_drizzle_module` optiotn while configuring OpenResty.
 

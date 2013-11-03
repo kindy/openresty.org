@@ -1,13 +1,13 @@
 This sample demonstrates usage of [LuaRocks](http://www.luarocks.org/) with OpenResty. It's been tested on Linux and Mac OS X, with the standard Lua interpreter or with LuaJIT.
 
-~LuaRocks is a deployment and management system for Lua modules. ~LuaRocks allows one to install Lua modules as self-contained packages called "rocks", which also contain version dependency  information.
+LuaRocks is a deployment and management system for Lua modules. LuaRocks allows one to install Lua modules as self-contained packages called "rocks", which also contain version dependency  information.
 
-We assume that you have installed OpenResty into the default location, i.e., `/usr/local/openresty`. You can adjust the paths in this sample according to the actual installation prefix of your OpenResty installation. If you haven't installed ~OpenResty yet, check out the [Download](Download) and [Installation](Installation) pages.
+We assume that you have installed OpenResty into the default location, i.e., `/usr/local/openresty`. You can adjust the paths in this sample according to the actual installation prefix of your OpenResty installation. If you haven't installed OpenResty yet, check out the [Download](Download) and [Installation](Installation) pages.
 
-# Install ~LuaRocks
-First of all, let's install ~LuaRocks:
+# Install LuaRocks
+First of all, let's install LuaRocks:
 
-Download the latest ~LuaRocks tarball from [http://www.luarocks.org/en/Download](http://www.luarocks.org/en/Download). As of this writing, the latest version is `2.0.12`, and we'll use this version throughout this sample.
+Download the latest LuaRocks tarball from [http://www.luarocks.org/en/Download](http://www.luarocks.org/en/Download). As of this writing, the latest version is `2.0.12`, and we'll use this version throughout this sample.
 ```
 wget http://luarocks.org/releases/luarocks-2.0.12.tar.gz
 tar -xzvf luarocks-2.0.12.tar.gz
@@ -19,12 +19,12 @@ cd luarocks-2.0.12/
 make
 sudo make install
 ```
-# Install the Lua ~MD5 library with ~LuaRocks
-In this sample, we'll use the Lua ~MD5 library to serve as an example, so let's install it with ~LuaRocks:
+# Install the Lua MD5 library with LuaRocks
+In this sample, we'll use the Lua MD5 library to serve as an example, so let's install it with LuaRocks:
 ```
 sudo luarocks install md5
 ```
-# Configuring our ~OpenResty application
+# Configuring our OpenResty application
 Let's change the current directory to `/usr/local/openresty/nginx/`:
 ```
 cd /usr/local/openresty/nginx/
@@ -114,7 +114,7 @@ Now let's do some benchmark:
 ```
 ab -c10 -n50000 http://127.0.0.1/luarocks
 ```
-On my Thinkpad T400 laptop (~Core2Duo T9600 CPU), it yields
+On my Thinkpad T400 laptop (Core2Duo T9600 CPU), it yields
 ```
 Server Software:        ngx_openresty/1.0.4.2rc10
 Server Hostname:        localhost
@@ -137,7 +137,7 @@ Transfer rate:          3007.41 [Kbytes/sec] received
 ```
 Note that the throughput is achieved by a single nginx worker process. While doing such benchmark on your own, just be careful about error log level settings in your nginx.conf and not to run out of dynamic port range on your local machine, or it'll be significantly slow after a short of period of time.
 # Known issues
-Pior to OpenResty 1.0.4.2rc10, it's known that turning `lua_code_cache` on will cause ~LuaRocks atop LuaNginxModule to throw out the following exception in `error.log`:
+Pior to OpenResty 1.0.4.2rc10, it's known that turning `lua_code_cache` on will cause LuaRocks atop LuaNginxModule to throw out the following exception in `error.log`:
 ```
 lua handler aborted: runtime error: stack overflow
 ```

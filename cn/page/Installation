@@ -17,7 +17,7 @@ make install
 ```
 apt-get install libreadline-dev libpcre3-dev libssl-dev perl
 ```
-##Fedora 和 ~RedHat 用户
+##Fedora 和 RedHat 用户
 推荐您使用yum安装以下的开发库:
 ```
 yum install readline-devel pcre-devel openssl-devel
@@ -28,7 +28,7 @@ yum install readline-devel pcre-devel openssl-devel
 brew install pcre
 ```
 当然了，您也可以直接通过代码安装 PCRE  :)
-##~FreeBSD 用户
+##FreeBSD 用户
 您需要安装以下的工具:
 * devel/gmake
 * security/openssl
@@ -36,12 +36,12 @@ brew install pcre
 ##Solaris 11 用户
 您需要从官方的源中安装以下的工具:
 * gcc-3
-* ~SUNWlibm
+* SUNWlibm
 通常情况下可以根据以下的示例安装：
 ```
 pfexec pkg install gcc-3 SUNWlibm
 ```
-#构建 ~OpenResty
+#构建 OpenResty
 ##下载
 从下载页 [Download](Download)下载最新的ngx_openresty源码包，并且像下面的示例一样将其解压:
 ```
@@ -67,7 +67,7 @@ tar xzvf ngx_openresty-VERSION.tar.gz
 
 配置文件（./configure script）运行出错可以到 `build/nginx-VERSION/objs/autoconf.err` 找到。 `VERSION` 的地方必须与OpenResty版本号相对应, 比如 `0.8.54.6`。
 ###Solaris的用户请注意：
-对于 Solaris,安装开发库一般通过 ~OpenSSL 的形式插入 `/lib`, 因此当编译时出现 missing ~OpenSSL 说明您已经安装过了t, 特别是一些选项的时候 `--with-ld-opt='-L/lib'` 。
+对于 Solaris,安装开发库一般通过 OpenSSL 的形式插入 `/lib`, 因此当编译时出现 missing OpenSSL 说明您已经安装过了t, 特别是一些选项的时候 `--with-ld-opt='-L/lib'` 。
 ##make
 您可以使用下面的命令来编译：
 ```

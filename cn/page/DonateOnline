@@ -1,12 +1,12 @@
-# 通过 ~PayPal 捐助
+# 通过 PayPal 捐助
 
-If you'd like to make a one-time donation to OpenResty, you can use ~PayPal to make it fast and easy.
-如果感觉 OpenResty 给力,想进行小额捐助,可以通过 ~PayPal 快捷完成.
+If you'd like to make a one-time donation to OpenResty, you can use PayPal to make it fast and easy.
+如果感觉 OpenResty 给力,想进行小额捐助,可以通过 PayPal 快捷完成.
 
-* ~PayPal 成员可以直接使用 ~PayPal 帐号登录,并点击以下按钮完成对的`agentzh@gmail.com` "支付" .
-* 非~PayPal 成员, 可以使用国际信用卡帐号来登入 ~PayPal. 两样的,点击下述按钮,跟随页面提示,完成 "支付" .
+* PayPal 成员可以直接使用 PayPal 帐号登录,并点击以下按钮完成对的`agentzh@gmail.com` "支付" .
+* 非PayPal 成员, 可以使用国际信用卡帐号来登入 PayPal. 两样的,点击下述按钮,跟随页面提示,完成 "支付" .
 
-不论哪种方式,只要通过 ~PayPal 都能方便的捐助。
+不论哪种方式,只要通过 PayPal 都能方便的捐助。
 
 <form name="_xclick" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
 <input type="hidden" name="cmd" value="_xclick">
@@ -17,7 +17,7 @@ If you'd like to make a one-time donation to OpenResty, you can use ~PayPal to m
 <input type="image" src="/s/donate_button_paypal_01.gif" border="0" name="submit" alt="用 PayPal 捐助">
 </form>
 
-# 通过 ~AliPay (支付宝) 捐助
+# 通过 AliPay (支付宝) 捐助
 
 如果身在中国大陆,
 通常,更加方便的捐助渠道是通过 [AliPay](http://www.alipay.com/) 支付给 `agentzh@yahoo.cn` , 或是简单的点击以下按钮:

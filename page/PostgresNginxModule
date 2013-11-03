@@ -1,4 +1,4 @@
-ngx_postgres is an upstream module that allows [Nginx](Nginx) to communicate directly with ~PostgreSQL database.
+ngx_postgres is an upstream module that allows [Nginx](Nginx) to communicate directly with PostgreSQL database.
 
 Response is generated in RDS format, so it's compatible with RdsJsonNginxModule and DrizzleNginxModule modules.
 

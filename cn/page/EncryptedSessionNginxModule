@@ -1,4 +1,4 @@
-This module provides encryption and decryption support for [Nginx](Nginx) variables based on ~AES-256 with Mac.
+This module provides encryption and decryption support for [Nginx](Nginx) variables based on AES-256 with Mac.
 
 This module is usually used with [SetMiscNginxModule](SetMiscNginxModule) and the standard [rewrite module](http://wiki.nginx.org/NginxHttpRewriteModule)'s directives.
 

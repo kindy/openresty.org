@@ -1,9 +1,9 @@
-#~HelloWorld
-Testing the performance of a ~HelloWorld server does not mean many things but it does tell us where the ceiling is.
+#HelloWorld
+Testing the performance of a HelloWorld server does not mean many things but it does tell us where the ceiling is.
 
-The ~HelloWorld server based on OpenResty is described in the [GettingStarted](GettingStarted) document.
+The HelloWorld server based on OpenResty is described in the [GettingStarted](GettingStarted) document.
 
-Below is the result using the command `http_load -p 10 -s 5 http://localhost:8080/` on my ~ThinkPad T400 laptop with ngx_openresty 1.0.10.1:
+Below is the result using the command `http_load -p 10 -s 5 http://localhost:8080/` on my ThinkPad T400 laptop with ngx_openresty 1.0.10.1:
 ```
 139620 fetches, 10 max parallel, 1.67544e+06 bytes, in 5.00001 seconds
 12 mean bytes/connection
@@ -16,7 +16,7 @@ HTTP response codes:
 
 So on my laptop, for only a single worker nginx server, we've got ~28k r/s. The memory footprint of the `node` process under load is 38.0m VIRT, 2.5m RES.
 
-For comparison, ~HelloWorld servers using nginx + php-fpm 5.2.8 gives ~6k r/s:
+For comparison, HelloWorld servers using nginx + php-fpm 5.2.8 gives ~6k r/s:
 ```
 http_load -p 10 -s 5 url
 29703 fetches, 10 max parallel, 326733 bytes, in 5 seconds

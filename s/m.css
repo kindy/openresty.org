@@ -1,8 +1,26 @@
+html {
+    font-size: 1em;
+}
 body {
-    font-size: 14px;
+    font-size: 1.2em;
 }
 
+#sidebar .list-group {
+    font-size: 1.1em;
+}
 #sidebar .list-group a {
     display: block;
     margin-bottom: 3px;
+}
+
+.navbar-nav {
+    float: right;
+}
+.navbar-header p {
+    float: left;
+    color: #999;
+    white-space: nowrap;
+    display: inline;
+    padding-top: 15px;
+    font-size: 0.9em;
 }

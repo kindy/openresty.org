@@ -7,6 +7,9 @@ body {
 
 #sidebar .list-group {
     font-size: 1.1em;
+    background: #f6f6f6;
+    padding: 5px 5px 5px 8px;
+    box-shadow: 0 0 5px #ccc;
 }
 #sidebar .list-group a {
     display: block;
@@ -16,11 +19,22 @@ body {
 .navbar-nav {
     float: right;
 }
-.navbar-header p {
+.navbar-inverse {
+    background: #1F866E
+}
+.navbar-inverse .navbar-brand {
+    color: white;
+}
+.navbar-inverse p {
     float: left;
-    color: #999;
+    color: #f2f2f2;
     white-space: nowrap;
     display: inline;
     padding-top: 15px;
     font-size: 0.9em;
 }
+
+pre {
+    font-size: .95em;
+}
+
